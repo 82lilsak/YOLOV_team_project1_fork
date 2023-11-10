@@ -27,7 +27,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 import ffmpeg
 
-youtube_url = "https://youtu.be/5LLu-WKm74I?si=ia3k8hiOlF3XsF3b"
+youtube_url = "https://youtu.be/XFCVW1gjuBQ?si=ZT7bpj0IxXUc7MGE"
 
 # YouTubeDL 객체 생성
 ydl_opts = {
