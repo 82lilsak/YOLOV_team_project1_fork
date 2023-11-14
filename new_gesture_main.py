@@ -16,6 +16,8 @@ from yolov8_module import main
 from queue import Queue
 import threading
 import webbrowser
+from script import run_game
+from racing_main import racing_main
 
 cv2.ocl.setUseOpenCL(True)
 cv2.setUseOptimized(True)
@@ -102,6 +104,29 @@ while True:
             cap = cv2.VideoCapture(0)
             cap.set(3, wCam)
             cap.set(4, hCam)
+
+        elif "game" in command:
+
+            cap.release()
+            cv2.destroyAllWindows()
+
+            run_game()
+            cap = cv2.VideoCapture(0)
+            cap.set(3, wCam)
+            cap.set(4, hCam)
+
+        elif "racing" in command:
+
+            cap.release()
+            cv2.destroyAllWindows()
+
+            racing_main()
+            cap = cv2.VideoCapture(0)
+            cap.set(3, wCam)
+            cap.set(4, hCam)
+
+
+
 
 
     if len(lmList) != 0:
